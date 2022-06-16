@@ -1,0 +1,7 @@
+name: NMSTest
+version: '${project.version}'
+main: me.unleqitq.customtickspeed.CustomTickSpeed
+api-version: 1.14
+authors: [ UnleqitQ ]
+libraries:
+  - io.netty:netty-buffer:4.1.77.Final
