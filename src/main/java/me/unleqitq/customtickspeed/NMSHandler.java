@@ -31,7 +31,7 @@ public class NMSHandler {
 	
 	private static void getMappings() throws IOException {
 		String versionString = Bukkit.getBukkitVersion().split("-")[0];
-		Version version = Version.getByVersion(versionString, Version.Type.SERVER);
+		Version version = Version.getByVersion(versionString);
 		URL mappingsUrl = new URL(version.getMappings());
 		URLConnection connection = mappingsUrl.openConnection();
 		InputStream is = connection.getInputStream();
