@@ -1,4 +1,4 @@
-name: NMSTest
+name: CustomTickSpeed
 version: '${project.version}'
 main: me.unleqitq.customtickspeed.CustomTickSpeed
 api-version: 1.14

@@ -29,7 +29,8 @@ public final class CustomTickSpeed extends JavaPlugin {
 		commandManager = new CommandManager(this);
 		try {
 			NMSHandler.init();
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 		
@@ -41,8 +42,9 @@ public final class CustomTickSpeed extends JavaPlugin {
 			nextTickTimeField = minecraftServerClass.getDeclaredField(
 					NMSHandler.getClassData("net.minecraft.server.MinecraftServer").getFieldData(fieldName)
 							.obfuscatedName());
-		} catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException |
-		         NoSuchFieldException e) {
+		}
+		catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException |
+		       NoSuchFieldException e) {
 			throw new RuntimeException(e);
 		}
 		FrameworkCommand.Builder<CommandSender> topBuilder = FrameworkCommand.commandBuilder("tickspeed");
@@ -63,7 +65,8 @@ public final class CustomTickSpeed extends JavaPlugin {
 			return true;
 		}));
 		
-		commandManager.register(FrameworkCommand.commandBuilder("tickwarp").setDescription("Increase the TickSpeed for a set amount of ticks").permission("tickspeed")
+		commandManager.register(FrameworkCommand.commandBuilder("tickwarp")
+				.setDescription("Increase the TickSpeed for a set amount of ticks").permission("tickspeed")
 				.argument(IntegerArgument.of("ticks"), "The amount of ticks you want to speed up")
 				.argument(FloatArgument.optional("multiplier", 2).withMin(1.5f).withMax(100),
 						"The ratio you want to speed the world up to").handler(c -> {
@@ -85,7 +88,8 @@ public final class CustomTickSpeed extends JavaPlugin {
 					long time = nextTickTimeField.getLong(minecraftServerObject);
 					time += addition;
 					nextTickTimeField.setLong(minecraftServerObject, time);
-				} catch (IllegalAccessException e) {
+				}
+				catch (IllegalAccessException e) {
 					throw new RuntimeException(e);
 				}
 				warpTicksLeft--;
@@ -101,7 +105,8 @@ public final class CustomTickSpeed extends JavaPlugin {
 					long time = nextTickTimeField.getLong(minecraftServerObject);
 					time += addition;
 					nextTickTimeField.setLong(minecraftServerObject, time);
-				} catch (IllegalAccessException e) {
+				}
+				catch (IllegalAccessException e) {
 					throw new RuntimeException(e);
 				}
 			}

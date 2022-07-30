@@ -44,6 +44,7 @@
                 </executions>
             </plugin>
         </plugins>
+        <finalName>${project.name}</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -96,7 +97,7 @@
             <groupId>me.unleqitq</groupId>
             <artifactId>CommandFramework</artifactId>
             <version>1.0.0</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
