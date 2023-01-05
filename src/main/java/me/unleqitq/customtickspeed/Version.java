@@ -20,10 +20,10 @@ public enum Version {
 	SERVER_1_18_1("1.18.1", "125e5adf40c659fd3bce3e66e67a16bb49ecc1b9", "9717df2acd926bd4a9a7b2ce5f981bb7e4f7f04a"),
 	SERVER_1_18_2("1.18.2", "c8f83c5655308435b3dcf03c06d9fe8740a77469", "e562f588fea155d96291267465dc3323bfe1551b"),
 	SERVER_1_19("1.19", "e00c4052dac1d59a1188b2aa9d5a87113aaf1122", "1c1cea17d5cd63d68356df2ef31e724dd09f8c26"),
-	SERVER_COMBAT_TEST_8c("combat_test_8c", "b707c44ac1503ad179fde86c78d41aa4d0cc78a5",
-			"d89f9e0eb8fbe6f2c91e749e8b59391cd0dd96d4"),
-	SERVER_20w14infinite("20w14infinite", "c0711cd9608d1af3d6f05ac423dd8f4199780225",
-			"a94a32e698caff0f5c5762b3dca045ddcd587071");
+	SERVER_1_19_1("1.19.1", "8399e1211e95faa421c1507b322dbeae86d604df", "3565648cdd47ae15738fb804a95a659137d7cfd3"),
+	SERVER_1_19_2("1.19.2", "f69c284232d7c7580bd89a5a4931c3581eae1378", "ed5e6e8334ad67f5af0150beed0f3d156d74bd57"),
+	SERVER_1_19_3("1.19.3", "c9df48efed58511cdd0213c56b9013a7b5c9ac1f", "bc44f6dd84cd2f3ad8c0caad850eaca9e82067e3"),
+	;
 	
 	
 	private final String version;
